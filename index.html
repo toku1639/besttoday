@@ -82,7 +82,7 @@
 		<div class="main-visual__inner">
 			<div class="mv-image">
 				<p class="mv-image__bubble">そのExcel業務、いつまで続けますか？</p>
-				<img src="assets/main-visual_02.png" alt="" class="mv-image__img" loading="eager">
+				<img src="./assets/main-visual_02.png" alt="" class="mv-image__img" loading="eager">
 				<p class="mv-image__catch">貴社だけの「業務管理システム」で<br><span>Excelから卒業しませんか？</span></p>
 			</div>
 			<div class="mv-text">
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 		<div class="main-visual__bg">
-			<img src="assets/main-visual_01.png" alt="" loading="eager">
+			<img src="./assets/main-visual_01.png" alt="" loading="eager">
 			<div class="overlay"></div>
 		</div>
 	</div>
@@ -423,7 +423,7 @@
 				<div class="sec-works__content">
 					<div class="col-design02">
 						<div class="col-design02__img">
-							<img src="assets/works_01.jpg" alt="" srcset="assets/works_01.jpg 1x, assets/works_01@2x.jpg 2x" loading="lazy" class="">
+							<img src="./assets/works_01.jpg" alt="" loading="lazy" class="">
 						</div>
 						<div class="text-wrap col-design02__text">
 							<p class="read">Excelで管理していた在庫管理業務をFileMakerに移行したことで、<br class="tab-none">
@@ -460,7 +460,7 @@
 							<p class="voice-card__text">Excelで管理していた顧客データをFileMakerに移行し、複数人での同時編集が可能になりました</p>
 							<div class="voice-card__author">
 								<div class="author-avatar">
-									<img src="assets/voice-person_01.png" alt="" srcset="assets/voice-person_01.png 1x, assets/voice-person_01@2x.png 2x" loading="lazy" class="">
+									<img src="./assets/voice-person_01.png" alt="" loading="lazy" class="">
 								</div>
 								<div class="author-info">
 									<p class="author-name">A社</p>
@@ -479,7 +479,7 @@
 							<p class="voice-card__text">Excelでの手作業だった売上集計が自動化され、月次レポート作成時間が半減しました</p>
 							<div class="voice-card__author">
 								<div class="author-avatar">
-									<img src="assets/voice-person_02.png" alt="" srcset="assets/voice-person_02.png 1x, assets/voice-person_02@2x.png 2x" loading="lazy" class="">
+									<img src="./assets/voice-person_02.png" alt="" loading="lazy" class="">
 								</div>
 								<div class="author-info">
 									<p class="author-name">B社</p>
@@ -498,7 +498,7 @@
 							<p class="voice-card__text">Excelでは限界があった複雑な在庫管理が、FileMakerで効率的に管理できるようになりました</p>
 							<div class="voice-card__author">
 								<div class="author-avatar">
-									<img src="assets/voice-person_03.png" alt="" srcset="assets/voice-person_03.png 1x, assets/voice-person_03@2x.png 2x" loading="lazy" class="">
+									<img src="./assets/voice-person_03.png" alt="" loading="lazy" class="">
 								</div>
 								<div class="author-info">
 									<p class="author-name">C社</p>
@@ -606,7 +606,7 @@
 								<p class="text">FileMakerの直感的な開発環境により、従来のプログラミング開発と比較して期間短縮を実現。ドラッグ&ドロップの操作で画面設計からデータベース構築まで効率的に進められます。プロトタイプの作成も迅速で、開発途中での仕様変更にも柔軟に対応できます。</p>
 							</div>
 							<div class="col-design01__card">
-								<img src="assets/commitment_01.png" alt="" loading="lazy" class="">
+								<img src="./assets/commitment_01.png" alt="" loading="lazy" class="">
 							</div>
 						</li>
 						<li class="list-design02__item col-design01 --blue">
@@ -615,7 +615,7 @@
 								<p class="text">従来のカスタム開発と比較して、開発工数を削減できるため、コストパフォーマンスに優れています。FileMakerは一度開発すれば、Windows・Mac・iPad・iPhoneなど複数のプラットフォームで同じシステムを利用可能。長期的な運用コストも抑えられ、ROIの向上に貢献します。</p>
 							</div>
 							<div class="col-design01__card">
-								<img src="assets/commitment_02.png" alt="" loading="lazy" class="">
+								<img src="./assets/commitment_02.png" alt="" loading="lazy" class="">
 							</div>
 						</li>
 						<li class="list-design02__item col-design01 --yellow">
@@ -624,7 +624,7 @@
 								<p class="text">FileMakerは多くの外部サービスとのAPI連携が容易で、Salesforce、Slack、Google Workspace、Microsoft 365など、主要なビジネスツールとの連携が可能。既存システムとの連携や、最新のクラウドサービスとの統合もスムーズに行え、高品質で拡張性の高いシステムを構築できます。</p>
 							</div>
 							<div class="col-design01__card">
-								<img src="assets/commitment_03.png" alt="" loading="lazy" class="">
+								<img src="./assets/commitment_03.png" alt="" loading="lazy" class="">
 							</div>
 						</li>
 					</ul>
@@ -918,8 +918,8 @@
 		</div>
 		<div class="page-top">
 			<a href="#page-top">
-				<svg class="icon">
-					<use xlink:href="assets/img/sprite.svg#icon-arrow-narrow"></use>
+				<svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7 14L12 9L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			</a>
 		</div>
@@ -1024,32 +1024,51 @@
 				return false;
 			}
 			
-			// ハンバーガーボタンのクリックイベント
-			hamburger.addEventListener('click', function(e) {
-				e.preventDefault();
-				e.stopPropagation();
-				console.log('Hamburger clicked! (fallback)');
-				
-				const isActive = this.classList.contains('active');
-				console.log('Current active state:', isActive);
-				
-				if (isActive) {
-					// メニューを閉じる
-					this.classList.remove('active');
-					menu.classList.remove('active');
-					body.classList.remove('menu-open');
-					console.log('Menu closed! (fallback)');
-					console.log('Menu classes after close:', menu.className);
-				} else {
-					// メニューを開く
-					this.classList.add('active');
-					menu.classList.add('active');
-					body.classList.add('menu-open');
-					console.log('Menu opened! (fallback)');
-					console.log('Menu classes after open:', menu.className);
-					console.log('Menu computed style:', window.getComputedStyle(menu).display);
-				}
-			});
+		// ハンバーガーボタンのクリックイベント
+		hamburger.addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			console.log('Hamburger clicked! (fallback)');
+			
+			const isActive = this.classList.contains('active');
+			console.log('Current active state:', isActive);
+			
+			if (isActive) {
+				// メニューを閉じる
+				this.classList.remove('active');
+				menu.classList.remove('active');
+				body.classList.remove('menu-open');
+				console.log('Menu closed! (fallback)');
+				console.log('Menu classes after close:', menu.className);
+			} else {
+				// メニューを開く
+				this.classList.add('active');
+				menu.classList.add('active');
+				body.classList.add('menu-open');
+				console.log('Menu opened! (fallback)');
+				console.log('Menu classes after open:', menu.className);
+				console.log('Menu computed style:', window.getComputedStyle(menu).display);
+			}
+		});
+		
+		// タッチイベントも追加（スマホ対応）
+		hamburger.addEventListener('touchstart', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			console.log('Hamburger touched! (fallback)');
+			
+			const isActive = this.classList.contains('active');
+			
+			if (isActive) {
+				this.classList.remove('active');
+				menu.classList.remove('active');
+				body.classList.remove('menu-open');
+			} else {
+				this.classList.add('active');
+				menu.classList.add('active');
+				body.classList.add('menu-open');
+			}
+		});
 			
 			// メニューリンククリック時の処理
 			const menuLinks = menu.querySelectorAll('a');
