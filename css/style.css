@@ -584,7 +584,8 @@ body.menu-open {
   
   .mv-image__bubble {
     font-size: 16px;
-    padding: 12px 30px;
+    padding: 12px 20px;
+    line-height: 1.3;
   }
   
   .mv-image__img {
@@ -600,12 +601,16 @@ body.menu-open {
   .mv-text__catch {
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.3;
   }
   
   .mv-text__text {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
   }
   
   /* mv-cta関連のCSSは削除済み */
@@ -625,7 +630,8 @@ body.menu-open {
   
   .mv-image__bubble {
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    line-height: 1.3;
   }
   
   .mv-image__img {
@@ -641,12 +647,16 @@ body.menu-open {
   .mv-text__catch {
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.3;
   }
   
   .mv-text__text {
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 15px;
+    text-align: center;
+    padding: 0 15px;
   }
   
   /* mv-cta関連のCSSは削除済み */
@@ -2259,6 +2269,126 @@ section {
 ====================================================*/
 .sec-works__text {
   margin-top: 40px;
+}
+
+/* 制作事例 - 新しいデザイン */
+.works-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.works-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.works-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.works-item__img {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.works-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.works-item:hover .works-item__img img {
+  transform: scale(1.05);
+}
+
+.works-item__content {
+  padding: 25px;
+  flex: 1;
+}
+
+.works-item__category {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.works-item__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.works-item__description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0 0 20px 0;
+}
+
+.works-item__result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.result-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .works-item {
+    flex-direction: column;
+  }
+  
+  .works-item__img {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .works-item__content {
+    padding: 20px;
+  }
+  
+  .works-item__title {
+    font-size: 18px;
+  }
+  
+  .works-item__description {
+    font-size: 14px;
+  }
 }
 
 .col-design02 {
@@ -3908,27 +4038,46 @@ thanksページ
   }
 }
 
-/* 比較表スタイル
+/* 比較表スタイル - シンプル版
 ====================================================*/
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin: 40px 0;
+  padding: 0;
+}
+
 .comparison-table {
   background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin: 40px 0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .comparison-table__header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background: #666;
   color: #fff;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.comparison-table__header .comparison-table__item {
+  color: #fff !important;
+}
+
+.comparison-table__header .comparison-table__item h3 {
+  color: #fff !important;
+}
+
+.comparison-table__header .comparison-table__subtitle {
+  color: #fff !important;
 }
 
 .comparison-table__row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -3937,21 +4086,21 @@ thanksページ
 }
 
 .comparison-table__item {
-  padding: 24px 20px;
+  padding: 20px 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   transition: all 0.2s ease;
+  min-height: 60px;
+  text-align: center;
 }
 
-/* ヘッダーの高さを調整 */
 .comparison-table__header .comparison-table__item {
-  padding: 16px 20px;
+  padding: 16px 16px;
+  min-height: 50px;
 }
 
-.comparison-table__item:hover {
-  background: rgba(0, 0, 0, 0.02);
-}
 
 .comparison-table__item--empty {
   background: transparent;
@@ -3960,176 +4109,158 @@ thanksページ
 .comparison-table__item--title {
   flex-direction: column;
   text-align: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .comparison-table__item--title h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .comparison-table__subtitle {
-  font-size: 14px;
-  opacity: 0.85;
+  font-size: 12px;
+  opacity: 0.7;
   margin: 0;
   font-weight: 400;
+  color: #fff;
 }
 
 .comparison-table__item--label {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: #666;
   font-weight: 600;
-  color: #1e293b;
-  border-right: 1px solid rgba(0, 0, 0, 0.06);
-  font-size: 15px;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  position: sticky;
+  left: 0;
+  z-index: 2;
 }
 
 .comparison-table__item--content {
   font-weight: 500;
-  color: #475569;
-  font-size: 15px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fff;
 }
 
-
 .comparison-table__item--good {
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-  color: #166534;
-  border-left: 3px solid #22c55e;
+  background: #fff;
+  color: #666;
 }
 
 .comparison-table__item--bad {
-  background: linear-gradient(135deg, #fefefe 0%, #f9fafb 100%);
-  color: #6b7280;
-  border-left: 3px solid #e5e7eb;
+  background: #fff;
+  color: #666;
+}
+
+.comparison-table__item--neutral {
+  background: #fff;
+  color: #666;
 }
 
 .comparison-table__icon {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
-  min-width: 20px;
-  opacity: 0.8;
+  min-width: 24px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.comparison-table__text {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .comparison-table__item--good .comparison-table__icon {
-  color: #22c55e;
+  color: #dc2626;
 }
 
 .comparison-table__item--bad .comparison-table__icon {
-  color: #9ca3af;
+  color: #666;
+}
+
+.comparison-table__item--neutral .comparison-table__icon {
+  color: #2563eb;
+}
+
+.comparison-table__item--best {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.comparison-table__item--content.comparison-table__item--best {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.comparison-table__item--title.comparison-table__item--best {
+  background: #f8f9fa;
+  color: #666;
+}
+
+.comparison-table__header .comparison-table__item--best {
+  background: #666 !important;
+  color: #fff !important;
+}
+
+.comparison-table__item--best:hover {
+  background: #f8f9fa !important;
+}
+
+.comparison-table__item--content.comparison-table__item--best:hover {
+  background: #f8f9fa !important;
+}
+
+.comparison-table__item--title.comparison-table__item--best:hover {
+  background: #f8f9fa !important;
+}
+
+.comparison-table__header .comparison-table__item--best:hover {
+  background: #666 !important;
+}
+
+.comparison-table__item--best .comparison-table__icon {
+  color: #dc2626;
+}
+
+.comparison-table__item--best .comparison-table__icon[data-icon="circle"] {
+  color: #000;
+}
+
+.comparison-table__header .comparison-table__item--best .comparison-table__icon {
+  color: #fff !important;
 }
 
 /* レスポンシブ対応 - 横スクロール形式 */
 @media screen and (max-width: 768px) {
-  .sec-saas-comparison__content {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 20px;
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  .comparison-table {
-    min-width: 600px !important;
-    width: 100%;
-    border-radius: 12px;
+  .comparison-table-wrapper {
     margin: 30px 0;
-    flex-shrink: 0;
-  }
-  
-  .comparison-table__header,
-  .comparison-table__row {
-    grid-template-columns: 200px 200px 200px;
-    min-width: 600px;
-  }
-  
-  .comparison-table__item {
-    padding: 20px 16px;
-    white-space: nowrap;
-  }
-  
-  /* タブレット表示でのヘッダー高さ調整 */
-  .comparison-table__header .comparison-table__item {
-    padding: 14px 16px;
-  }
-  
-  .comparison-table__item--title h3 {
-    font-size: 18px;
-  }
-  
-  .comparison-table__item--label {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-right: 1px solid rgba(0, 0, 0, 0.06);
-    position: sticky;
-    left: 0;
-    z-index: 2;
-    min-width: 180px;
-  }
-  
-  .comparison-table__item--title {
-    min-width: 180px;
-  }
-  
-  .comparison-table__item--content {
-    min-width: 180px;
-  }
-  
-  /* スクロールインジケーター */
-  .sec-saas-comparison__content::after {
-    content: "← スワイプして確認 →";
-    display: block;
-    text-align: center;
-    color: #6b7280;
-    font-size: 14px;
-    margin-top: 15px;
-    font-weight: 500;
-  }
-  
-  /* スクロールバーのスタイリング */
-  .sec-saas-comparison__content::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  .sec-saas-comparison__content::-webkit-scrollbar-track {
-    background: #f1f5f9;
-    border-radius: 4px;
-  }
-  
-  .sec-saas-comparison__content::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
-  }
-  
-  .sec-saas-comparison__content::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
-  }
-}
-
-/* より小さな画面での対応 */
-@media screen and (max-width: 480px) {
-  .sec-saas-comparison__content {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
+    padding: 0 10px;
   }
   
   .comparison-table {
-    min-width: 500px !important;
+    min-width: 900px !important;
+    border-radius: 8px;
   }
   
   .comparison-table__header,
   .comparison-table__row {
-    grid-template-columns: 150px 175px 175px;
-    min-width: 500px;
+    grid-template-columns: 150px 180px 180px 180px 180px;
   }
   
   .comparison-table__item {
     padding: 16px 12px;
-    font-size: 14px;
+    font-size: 13px;
+    min-height: 50px;
   }
   
-  /* スマートフォン表示でのヘッダー高さ調整 */
   .comparison-table__header .comparison-table__item {
     padding: 12px 12px;
+    min-height: 40px;
   }
   
   .comparison-table__item--title h3 {
@@ -4137,25 +4268,86 @@ thanksページ
   }
   
   .comparison-table__subtitle {
-    font-size: 12px;
+    font-size: 11px;
   }
   
   .comparison-table__item--label {
     min-width: 130px;
-    font-size: 14px;
-  }
-  
-  .comparison-table__item--title {
-    min-width: 150px;
+    font-size: 13px;
   }
   
   .comparison-table__item--content {
-    min-width: 150px;
+    font-size: 13px;
+  }
+  
+  .comparison-table__icon {
+    font-size: 16px;
+    min-width: 20px;
+  }
+  
+  /* スクロールインジケーター */
+  .sec-saas-comparison__content::after {
+    content: "← スワイプして確認 →";
+    display: block;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .comparison-table-wrapper {
+    margin: 20px 0;
+    padding: 0 5px;
+  }
+  
+  .comparison-table {
+    min-width: 800px !important;
+  }
+  
+  .comparison-table__header,
+  .comparison-table__row {
+    grid-template-columns: 120px 160px 160px 160px 160px;
+  }
+  
+  .comparison-table__item {
+    padding: 12px 8px;
+    font-size: 12px;
+    min-height: 45px;
+  }
+  
+  .comparison-table__header .comparison-table__item {
+    padding: 10px 8px;
+    min-height: 35px;
+  }
+  
+  .comparison-table__item--title h3 {
+    font-size: 14px;
+  }
+  
+  .comparison-table__subtitle {
+    font-size: 10px;
+  }
+  
+  .comparison-table__item--label {
+    min-width: 110px;
+    font-size: 12px;
+  }
+  
+  .comparison-table__item--content {
+    font-size: 12px;
+  }
+  
+  .comparison-table__icon {
+    font-size: 14px;
+    min-width: 18px;
   }
   
   .sec-saas-comparison__content::after {
-    font-size: 13px;
-    margin-top: 12px;
+    font-size: 12px;
+    margin-top: 10px;
   }
 }
 
@@ -4270,7 +4462,7 @@ thanksページ
   
   .filemaker-intro {
     padding: 20px 15px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   
   .filemaker-intro h3 {
@@ -5388,12 +5580,13 @@ thanksページ
 }
 
 .problem-item {
-  background: #f8f9fa;
+  background: #ffffff;
   border: 2px solid #e9ecef;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 24px 20px;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .problem-item:hover {
@@ -5405,9 +5598,9 @@ thanksページ
 .problem-number {
   font-size: 2rem;
   font-weight: bold;
-  color: #ff6b35;
+  color: #ffffff;
   margin-bottom: 15px;
-  background: #fff;
+  background: #ff6b35;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -5415,6 +5608,7 @@ thanksページ
   align-items: center;
   justify-content: center;
   margin: 0 auto 15px auto;
+  box-shadow: 0 2px 4px rgba(255, 107, 53, 0.3);
 }
 
 .problem-text p {
@@ -5453,12 +5647,13 @@ thanksページ
   
   .problem-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 18px;
     margin: 30px 0;
   }
   
   .problem-item {
-    padding: 15px;
+    padding: 20px 15px;
+    border-radius: 12px;
   }
   
   .problem-number {
@@ -5468,7 +5663,8 @@ thanksページ
   }
   
   .problem-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
   
   .problem-highlight {
@@ -5499,12 +5695,13 @@ thanksページ
 @media screen and (max-width: 480px) {
   .problem-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 16px;
     margin: 20px 0;
   }
   
   .problem-item {
-    padding: 12px;
+    padding: 18px 12px;
+    border-radius: 12px;
   }
   
   .problem-number {
@@ -5514,7 +5711,7 @@ thanksページ
   }
   
   .problem-text p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.5;
   }
   
@@ -5590,7 +5787,7 @@ thanksページ
   .sec-strength .list-design02 .list-design02__item:first-of-type,
   .sec-commitment .list-design02 .list-design02__item:first-of-type,
   .list-design02 .list-design02__item:first-of-type {
-    margin-top: 15px !important;
+    margin-top: 30px !important;
   }
   
   /* col-design01__headの余白を110px程度に調整 */
@@ -5642,6 +5839,7 @@ thanksページ
     margin-bottom: 90px !important;
   }
 }
+
 
 /* ========================================
    お客様の声セクション 横スクロールバー
